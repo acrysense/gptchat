@@ -103,7 +103,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 14px 6px 14px 0;
+  padding: 10px 0 10px 10px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -145,6 +145,11 @@ svg {
     pointer-events: all;
   }
 }
+@media screen and (max-width: 767px) {
+  .c-language__trigger {
+    padding: 10px 14px 10px 0;
+  }
+}
 .c-language__dropdown {
   position: absolute;
   top: 100%;
@@ -161,10 +166,10 @@ svg {
       -ms-transform-origin: top;
           transform-origin: top;
   padding: 14px;
-  min-width: 290px;
-  width: 290px;
-  background: #090f1e;
-  border-radius: 0 0 4px 4px;
+  min-width: 294px;
+  width: 294px;
+  background: #FFFFFF;
+  border-radius: 30px;
   -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   -webkit-transition-duration: 500ms;
@@ -219,7 +224,7 @@ svg {
   width: 100%;
   font-size: 16px;
   font-weight: normal;
-  color: #FFFFFF;
+  color: #000000;
   background: transparent;
   border: none;
   border-radius: 0;
@@ -241,6 +246,9 @@ svg {
 }
 .c-language__btn:focus {
   outline: none;
+}
+.c-language__btn:hover {
+  color: #000000;
 }
 @media screen and (hover: hover) {
   .c-language__btn:hover {
@@ -304,8 +312,14 @@ svg {
   right: 0;
   left: 0;
   z-index: 600;
+  padding: 19px 0;
   width: 100%;
   background: #000000;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 10px 0;
+  }
 }
 .header__wrapper {
   display: -webkit-box;
@@ -342,18 +356,18 @@ svg {
 .header__btn {
   display: block;
   margin-left: auto;
-  padding: 6px 12px;
+  padding: 13.5px 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
   text-align: center;
-  color: #FFFFFF;
-  background: #18c389;
+  color: #000000;
+  background: #00efbf;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -361,7 +375,12 @@ svg {
   outline: none;
 }
 .header__btn:hover {
-  color: #FFFFFF;
+  color: #000000;
+}
+@media screen and (hover: hover) {
+  .header__btn:hover {
+    background: #18c389;
+  }
 }
 @media screen and (max-width: 767px) {
   .header__btn {
@@ -379,13 +398,9 @@ svg {
     display: none;
   }
 }
-.header__language {
-  margin-left: 10px;
-}
 @media screen and (max-width: 767px) {
   .header__language {
     margin-left: auto;
-    margin-right: 10px;
   }
 }
 
@@ -396,9 +411,19 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 22px;
+  padding: 0 26px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  border: 1px solid #393939;
+  border-radius: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav__list {
+    gap: 16px;
+    padding: 0 20px;
+  }
 }
 @media screen and (max-width: 767px) {
   .nav__list {
@@ -406,7 +431,11 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
+    padding: 0;
     width: 100%;
+    border: none;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -416,14 +445,14 @@ svg {
 }
 .nav__link {
   display: block;
-  padding: 14px 16px;
+  padding: 12.5px 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
   color: #FFFFFF;
-  border-bottom: 2px solid transparent;
 }
 .nav__link:hover {
   color: #FFFFFF;
@@ -431,12 +460,11 @@ svg {
 @media screen and (hover: hover) {
   .nav__link:hover {
     color: #18c389;
-    border-color: #18c389;
   }
 }
 @media screen and (max-width: 767px) {
   .nav__link {
-    padding: 10px 20px;
+    padding: 12.5px 20px;
     width: 100%;
   }
 }
@@ -734,7 +762,7 @@ svg {
 }
 .menu__btn {
   display: block;
-  margin: 10px 20px 0;
+  margin: 16px 20px 0;
   padding: 6px 12px;
   width: calc(100% - 40px);
   font-size: 16px;
@@ -767,13 +795,7 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 50px;
   min-height: 100vh;
-}
-@media screen and (max-width: 767px) {
-  .wrapper {
-    padding-top: 62px;
-  }
 }
 .wrapper__content {
   -webkit-box-flex: 1;
@@ -988,7 +1010,7 @@ svg {
 .gptchat-home {
   position: relative;
   z-index: 1;
-  padding: 28px 0;
+  padding: 110px 0 28px;
 }
 .gptchat-home__heading {
   display: block;
@@ -1198,6 +1220,162 @@ svg {
 
 .chatgpt-text__content {
   width: 100%;
+}
+
+.gptchat-topics__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .gptchat-topics__item {
+    width: calc(25% - 15px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .gptchat-topics__item {
+    width: calc(33.333333333% - 13.3333333333px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .gptchat-topics__item {
+    width: 100%;
+  }
+}
+
+.gptchat-topics-card {
+  background: #181a1c;
+  border-radius: 24px;
+}
+.gptchat-topics-card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 20px;
+  margin-bottom: 12px;
+}
+.gptchat-topics-card__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 12px;
+  padding: 16px;
+  min-width: 62px;
+  width: 62px;
+  height: 62px;
+  font-size: 0;
+  background: #2d3135;
+  border-radius: 24px;
+}
+.gptchat-topics-card__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.gptchat-topics-card__title {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  font-weight: 600;
+}
+.gptchat-topics-card__help {
+  display: block;
+  margin-top: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: normal;
+  color: #6a7580;
+}
+.gptchat-topics-card__body {
+  padding: 0 20px 20px;
+}
+.gptchat-topics-card__description {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #e0e0e0;
+}
+
+.gptchat-topics-tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #393939;
+  border-radius: 34px;
+}
+.gptchat-topics-tabs__tab {
+  display: block;
+  padding: 8.5px 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1;
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  border-radius: 24px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.gptchat-topics-tabs__tab:focus {
+  outline: none;
+}
+.gptchat-topics-tabs__tab:hover {
+  color: #FFFFFF;
+}
+.gptchat-topics-tabs__tab.is--active {
+  color: #000000;
+  background: #FFFFFF;
+}
+@media screen and (hover: hover) {
+  .gptchat-topics-tabs__tab:hover:not(.is--active) {
+    opacity: 0.6;
+  }
+}
+.gptchat-topics-tabs__wrapper {
+  margin-top: 72px;
+}
+@media screen and (max-width: 767px) {
+  .gptchat-topics-tabs__wrapper {
+    margin-top: 42px;
+  }
 }
 
 .gptchat-how-to__wrapper {
@@ -1460,6 +1638,7 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  padding-right: 20px;
 }
 .gptchat-features__img {
   display: block;
