@@ -813,8 +813,8 @@ svg {
 }
 
 .section-indent {
-  margin-top: 36px;
-  padding-top: 36px;
+  margin-top: 38px;
+  padding-top: 38px;
 }
 @media screen and (max-width: 767px) {
   .section-indent {
@@ -1227,6 +1227,107 @@ svg {
      object-fit: cover;
 }
 
+.gptchat-chat {
+  position: relative;
+  z-index: 1;
+  padding: 110px 0 28px;
+}
+.gptchat-chat__top {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.gptchat-chat__heading {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 40px;
+  font-weight: bold;
+}
+.gptchat-chat__title {
+  display: block;
+  margin: 10px auto 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 300;
+}
+.gptchat-chat__media {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 700px;
+}
+.gptchat-chat__media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: block;
+  width: 100vw;
+  height: 100%;
+  background: #121213;
+}
+.gptchat-chat__media > * {
+  display: block;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .gptchat-chat__media {
+    height: 450px;
+  }
+}
+.gptchat-chat__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  margin: 20px auto 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.gptchat-chat__control {
+  display: block;
+  width: auto;
+  height: 60px;
+}
+.gptchat-chat__control img {
+  display: block;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.gptchat-chat__banner {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 180px;
+}
+.gptchat-chat__banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .chatgpt-text__content {
   width: 100%;
 }
@@ -1297,6 +1398,11 @@ svg {
 .gptchat-topics__more:hover {
   color: #000000;
 }
+.gptchat-topics__more.is--less > svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 @media screen and (hover: hover) {
   .gptchat-topics__more:hover {
     background: #18c389;
@@ -1311,21 +1417,28 @@ svg {
 .gptchat-topics-card {
   background: #181a1c;
   border-radius: 24px;
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-.gptchat-topics-card.is--hidden {
   opacity: 0;
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: translateY(20px) scale(0.95);
+      -ms-transform: translateY(20px) scale(0.95);
+          transform: translateY(20px) scale(0.95);
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.gptchat-topics-card.visible {
+  opacity: 1;
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+}
+.gptchat-topics-card.hidden {
+  opacity: 0;
+  -webkit-transform: translateY(20px) scale(0.95);
+      -ms-transform: translateY(20px) scale(0.95);
+          transform: translateY(20px) scale(0.95);
   pointer-events: none;
+  display: none;
 }
 .gptchat-topics-card__top {
   display: -webkit-box;
