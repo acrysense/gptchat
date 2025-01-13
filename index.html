@@ -155,36 +155,36 @@
 					<div class="gptchat-topics-tabs">
 						<ul class="gptchat-topics-tabs__list">
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab is--active">All</button>
+								<button class="gptchat-topics-tabs__tab is--active" data-category="all">All</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Education</button>
+								<button class="gptchat-topics-tabs__tab" data-category="education">Education</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Career</button>
+								<button class="gptchat-topics-tabs__tab" data-category="career">Career</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Social Media</button>
+								<button class="gptchat-topics-tabs__tab" data-category="social-media">Social Media</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Health</button>
+								<button class="gptchat-topics-tabs__tab" data-category="health">Health</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Recipes</button>
+								<button class="gptchat-topics-tabs__tab" data-category="recipes">Recipes</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Lifestyle</button>
+								<button class="gptchat-topics-tabs__tab" data-category="lifestyle">Lifestyle</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Entertainment</button>
+								<button class="gptchat-topics-tabs__tab" data-category="entertainment">Entertainment</button>
 							</li>
 							<li class="gptchat-topics-tabs__item">
-								<button class="gptchat-topics-tabs__tab">Games</button>
+								<button class="gptchat-topics-tabs__tab" data-category="games">Games</button>
 							</li>
 						</ul>
 						<div class="gptchat-topics-tabs__wrapper">
 							<div class="gptchat-topics__wrapper">
-								<div class="gptchat-topics-card gptchat-topics__item">
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="education">
 									<div class="gptchat-topics-card__top">
 										<picture class="gptchat-topics-card__icon">
 											<img src="img/topics-01.png" alt="Image">
@@ -198,7 +198,7 @@
 										<p class="gptchat-topics-card__description">Make spot for every mistake effortlessly</p>
 									</div>
 								</div>
-								<div class="gptchat-topics-card gptchat-topics__item">
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="career">
 									<div class="gptchat-topics-card__top">
 										<picture class="gptchat-topics-card__icon">
 											<img src="img/topics-01.png" alt="Image">
@@ -212,7 +212,7 @@
 										<p class="gptchat-topics-card__description">Improve your email writing productivity</p>
 									</div>
 								</div>
-								<div class="gptchat-topics-card gptchat-topics__item">
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="social-media">
 									<div class="gptchat-topics-card__top">
 										<picture class="gptchat-topics-card__icon">
 											<img src="img/topics-01.png" alt="Image">
@@ -226,7 +226,97 @@
 										<p class="gptchat-topics-card__description">Generate creative and viral TikTok ideas</p>
 									</div>
 								</div>
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="lifestyle">
+									<div class="gptchat-topics-card__top">
+										<picture class="gptchat-topics-card__icon">
+											<img src="img/topics-01.png" alt="Image">
+										</picture>
+										<div class="gptchat-topics-card__group">
+											<span class="gptchat-topics-card__title">Horoscope</span>
+											<span class="gptchat-topics-card__help">Lifestyle</span>
+										</div>
+									</div>
+									<div class="gptchat-topics-card__body">
+										<p class="gptchat-topics-card__description">Check out your horoscope for today</p>
+									</div>
+								</div>
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="entertainment">
+									<div class="gptchat-topics-card__top">
+										<picture class="gptchat-topics-card__icon">
+											<img src="img/topics-01.png" alt="Image">
+										</picture>
+										<div class="gptchat-topics-card__group">
+											<span class="gptchat-topics-card__title">Poetry</span>
+											<span class="gptchat-topics-card__help">Entertainment</span>
+										</div>
+									</div>
+									<div class="gptchat-topics-card__body">
+										<p class="gptchat-topics-card__description">Write a beautiful rhyming poem</p>
+									</div>
+								</div>
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="health">
+									<div class="gptchat-topics-card__top">
+										<picture class="gptchat-topics-card__icon">
+											<img src="img/topics-01.png" alt="Image">
+										</picture>
+										<div class="gptchat-topics-card__group">
+											<span class="gptchat-topics-card__title">Poetry</span>
+											<span class="gptchat-topics-card__help">Health</span>
+										</div>
+									</div>
+									<div class="gptchat-topics-card__body">
+										<p class="gptchat-topics-card__description">Write a beautiful rhyming poem</p>
+									</div>
+								</div>
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="recipes">
+									<div class="gptchat-topics-card__top">
+										<picture class="gptchat-topics-card__icon">
+											<img src="img/topics-01.png" alt="Image">
+										</picture>
+										<div class="gptchat-topics-card__group">
+											<span class="gptchat-topics-card__title">Poetry</span>
+											<span class="gptchat-topics-card__help">Recipes</span>
+										</div>
+									</div>
+									<div class="gptchat-topics-card__body">
+										<p class="gptchat-topics-card__description">Write a beautiful rhyming poem</p>
+									</div>
+								</div>
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="games">
+									<div class="gptchat-topics-card__top">
+										<picture class="gptchat-topics-card__icon">
+											<img src="img/topics-01.png" alt="Image">
+										</picture>
+										<div class="gptchat-topics-card__group">
+											<span class="gptchat-topics-card__title">Poetry</span>
+											<span class="gptchat-topics-card__help">Games</span>
+										</div>
+									</div>
+									<div class="gptchat-topics-card__body">
+										<p class="gptchat-topics-card__description">Write a beautiful rhyming poem</p>
+									</div>
+								</div>
+								<div class="gptchat-topics-card gptchat-topics__item" data-category="games">
+									<div class="gptchat-topics-card__top">
+										<picture class="gptchat-topics-card__icon">
+											<img src="img/topics-01.png" alt="Image">
+										</picture>
+										<div class="gptchat-topics-card__group">
+											<span class="gptchat-topics-card__title">Poetry</span>
+											<span class="gptchat-topics-card__help">Games</span>
+										</div>
+									</div>
+									<div class="gptchat-topics-card__body">
+										<p class="gptchat-topics-card__description">Write a beautiful rhyming poem</p>
+									</div>
+								</div>
 							</div>
+							<button class="gptchat-topics__more">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+								</svg>
+								<span>Show more</span>
+							</button>
 						</div>
 					</div>
 				</div>
