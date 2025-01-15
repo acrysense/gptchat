@@ -1358,12 +1358,12 @@ svg {
     width: calc(33.333333333% - 13.3333333333px);
   }
 }
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 767px) {
   .gptchat-topics__item {
     width: calc(50% - 6px);
   }
 }
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 374px) {
   .gptchat-topics__item {
     width: 100%;
   }
@@ -1427,6 +1427,7 @@ svg {
 .gptchat-topics-card {
   background: #181a1c;
   border-radius: 24px;
+  display: none;
   opacity: 0;
   -webkit-transform: translateY(20px) scale(0.95);
       -ms-transform: translateY(20px) scale(0.95);
@@ -1460,6 +1461,14 @@ svg {
   padding-right: 20px;
   margin-bottom: 12px;
 }
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .gptchat-topics-card__top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 12px 12px 0;
+  }
+}
 .gptchat-topics-card__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1486,14 +1495,16 @@ svg {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 767px) {
   .gptchat-topics-card__icon {
+    margin-top: 5px;
     margin-right: 8px;
-    padding: 10px;
-    min-width: 42px;
-    width: 42px;
-    height: 42px;
-    border-radius: 18px;
+    padding: 0;
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border-radius: 0;
   }
 }
 .gptchat-topics-card__title {
@@ -1504,9 +1515,9 @@ svg {
   font-size: 15px;
   font-weight: 600;
 }
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 767px) {
   .gptchat-topics-card__title {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 .gptchat-topics-card__help {
@@ -1519,15 +1530,20 @@ svg {
   font-weight: normal;
   color: #6a7580;
 }
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 767px) {
   .gptchat-topics-card__help {
-    margin-top: 0;
+    margin-top: 5px;
     font-size: 12px;
     line-height: 1;
   }
 }
 .gptchat-topics-card__body {
   padding: 0 20px 20px;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .gptchat-topics-card__body {
+    padding: 0 12px 12px;
+  }
 }
 .gptchat-topics-card__description {
   display: block;
