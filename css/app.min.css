@@ -1343,6 +1343,11 @@ svg {
           justify-content: center;
   gap: 20px;
 }
+@media screen and (max-width: 767px) {
+  .gptchat-topics__wrapper {
+    gap: 12px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .gptchat-topics__item {
     width: calc(25% - 15px);
@@ -1353,7 +1358,12 @@ svg {
     width: calc(33.333333333% - 13.3333333333px);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .gptchat-topics__item {
+    width: calc(50% - 6px);
+  }
+}
+@media screen and (max-width: 424px) {
   .gptchat-topics__item {
     width: 100%;
   }
@@ -1476,6 +1486,16 @@ svg {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .gptchat-topics-card__icon {
+    margin-right: 8px;
+    padding: 10px;
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 18px;
+  }
+}
 .gptchat-topics-card__title {
   display: block;
   width: -webkit-fit-content;
@@ -1483,6 +1503,11 @@ svg {
   width: fit-content;
   font-size: 15px;
   font-weight: 600;
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .gptchat-topics-card__title {
+    font-size: 13px;
+  }
 }
 .gptchat-topics-card__help {
   display: block;
@@ -1493,6 +1518,13 @@ svg {
   font-size: 13px;
   font-weight: normal;
   color: #6a7580;
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .gptchat-topics-card__help {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 1;
+  }
 }
 .gptchat-topics-card__body {
   padding: 0 20px 20px;
